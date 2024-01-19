@@ -1,0 +1,567 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+      margin: 0;
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .img-bg{
+      position: fixed;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      margin-top: -30px;
+      filter: brightness(50%);
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      z-index: 4;
+      width: 90%;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      margin-top: 20px;
+      margin-right: 60px;
+      margin-left: 60px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    li{
+      float: right;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+    }
+
+    #navbar a .title{
+      float: left;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding: 16px 18px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #navbar a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+
+    button,
+  button::after {
+   padding: 16px 20px;
+   font-size: 18px;
+   background: linear-gradient(45deg, transparent 5%, #f5af19 5%);
+   border: 0;
+   color: rgb(0, 0, 0);
+   font-weight: bold;
+   font-family: verdana;
+   line-height: 1;
+   box-shadow: 6px 0px 0px #ffffff;
+   outline: transparent;
+   position: relative;
+  }
+
+  button::after {
+   --slice-0: inset(50% 50% 50% 50%);
+   --slice-1: inset(80% -6px 0 0);
+   --slice-2: inset(50% -6px 30% 0);
+   --slice-3: inset(10% -6px 85% 0);
+   --slice-4: inset(40% -6px 43% 0);
+   --slice-5: inset(80% -6px 5% 0);
+   content: "Pendaftaran PPDB";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent 3%, #ffffff 3%, #a7a3a3 5%, #f5af19 5%);
+   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #e9e777;
+   clip-path: var(--slice-0);
+  }
+
+  .daftar{
+    margin-left: 60px;
+    margin-top: 80px;
+  }
+
+  button:hover::after {
+   animation: 1s glitch;
+   animation-timing-function: steps(2, end);
+  }
+
+  @keyframes glitch {
+   0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+   }
+
+   10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+   }
+
+   20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+   }
+
+   30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+   }
+
+   40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+   }
+
+   50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+   }
+
+   60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+   }
+
+   70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+   }
+
+   80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+   }
+
+   90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+   }
+
+   100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+   }
+  }
+
+  .card{
+    position: relative;
+    background-color: #f2f2f2;
+    text-align: center;
+    display: block;
+    display: flex;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .card h4{
+    font-size: 18px;
+  }
+
+  .card p{
+    font-size: 16px;
+  }
+
+  .card1{
+    width: 400px;
+    padding: 25px;
+    padding-bottom: 40px;
+  }
+
+  .card2{
+    width: 400px;
+    padding: 25px;
+    padding-bottom: 40px;
+  }
+
+  .card3{
+    width: 400px;
+    padding: 25px;
+    padding-bottom: 40px;
+  }
+
+  * {box-sizing: border-box}
+  body {font-family: Verdana, sans-serif; margin:0}
+  .mySlides{
+    display: none;
+    margin-left: -100px;
+  }
+  img {vertical-align: middle;}
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    margin: -150px;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+
+  .prev{
+    border-radius: 10px 0 0 10px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: #ffffff;
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .img-sli{
+    background-color: #ffffff;
+    padding-right: 400px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: -13px;
+  }
+
+  .img-sli p{
+    position: absolute;
+    margin-top: -285px;
+    margin-left: 495px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-bottom: 100px;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  .tit3{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  #content3{
+    background-color: rgb(248, 248, 248);
+    margin-top: 70px;
+    padding-top: 5px;
+    padding-bottom: 70px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .con{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .con2{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-evenly;
+  }
+
+  .cardo {
+    cursor: pointer;
+    width: 190px;
+    text-align: center;
+    height: 254px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    transition: all .2s;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+   }
+
+   .cardo img{
+    width: 130px;
+    margin-top: 10px;
+   }
+
+   .cardo p{
+    font-size: 18px;
+    margin: 7px;
+    margin-top: 30px;
+   }
+
+   .cardo:hover {
+    box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+   }
+
+   #content4 h3{
+    text-align: center;
+    margin-top: 70px;
+   }
+
+   #content4{
+    background-color: rgb(8, 15, 107);
+    padding-bottom: 100px;
+    padding-top: 1px;
+    color: #ffffff;
+   }
+
+   .row {
+    display: flex;
+  }
+
+  /* Create two equal columns that sits next to each other */
+  .column1 {
+    flex: 40%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin-left: 50px;
+  }
+
+  .column2 {
+    flex: 60%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin-right: 30px;
+  }
+
+  .text-kami{
+    font-size: 15px;
+    margin-top: -35px;
+    width: 420px;
+  }
+
+  .column2 form input{
+    width: 100%;
+    border-radius: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  footer{
+      position: fixed;
+      bottom: 0;
+  }
+
+  @media (max-height:800px){
+      footer { position: static; }
+      header { padding-top:40px; }
+  }
+
+
+  .footer-distributed{
+      background-color: #e7e5e9;
+    color: #333;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 50px 50px 30px 50px;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  /* Footer left */
+
+  .footer-distributed .footer-left{
+      width: 30%;
+  }
+
+  .footer-distributed h3{
+      color:  #333;
+      font: normal 36px 'Cookie', cursive;
+      margin: 0;
+  }
+
+  /* The company logo */
+
+  .footer-distributed .footer-left img{
+      width: 20%;
+  }
+
+  .footer-distributed h3 span{
+      color:  #e0ac1c;
+  }
+
+  /* Footer links */
+
+  .footer-distributed .footer-links{
+      color:  #333;
+      margin: 20px 0 12px;
+  }
+
+  .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color:  inherit;
+  }
+
+  .footer-distributed .footer-company-name{
+      color:  #333;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Footer Right */
+
+  .footer-distributed .footer-right{
+      width: 50%;
+    float: right;
+  }
+
+  .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+  }
+
+  .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #333;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+
+  .footer-distributed .footer-icons{
+      margin-top: 25px;
+  }
+
+  .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
+  }
+
+  hr{
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  /* Here is the code for Responsive Footer */
+  /* You can remove below code if you don't want Footer to be responsive */
+
+
+  @media (max-width: 880px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+          display: block;
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+      }
+
+      .footer-distributed .footer-center i{
+          margin-left: 0;
+      }
+
+  }

@@ -1,0 +1,156 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f1f1f1;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    display: block;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav .judul{
+      margin-top: -40px;
+      text-align: center;
+      font-weight: bold;
+      color: #11074b;
+  }
+
+  .sidenav a {
+    padding: 15px 15px 15px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #11074b;
+    padding-bottom: 60px;
+    color: white;
+  }
+
+  .main_judul{
+    position: absolute;
+    display: flex;
+    color: #11074b;
+    box-shadow: 5px 5px 20px 0 grey;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    width: 94%;
+    margin-top: -40px;
+    margin-left: 40px;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+
+  .main_judul b{
+    font-size: 30px;
+    margin-top: -15px;
+    font-family: monospace;
+  }
+
+  .cont{
+    margin-top: 70px;
+    transition: 0.5s;
+  }
+
+  .cont h3{
+    background-color: #11074b;
+    color: white;
+    width: fit-content;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .cont p{
+    color: #818181;
+    margin-left: 60px;
+  }
+
+  #main2 {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: #11074b;
+    padding-bottom: 60px;
+    color: white;
+  }
+
+  .main_judul2{
+    position: absolute;
+    display: flex;
+    color: #11074b;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    width: 94%;
+    margin-top: -40px;
+    margin-left: 40px;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+
+  .main_judul2 b{
+    font-size: 30px;
+    margin-top: -15px;
+    font-family: monospace;
+  }
+
+  .cont2{
+    margin-top: 70px;
+    transition: 0.5s;
+  }
+
+  .cont2 h3{
+    background-color: #11074b;
+    color: white;
+    width: fit-content;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .cont2 p{
+    color: #818181;
+    margin-left: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
